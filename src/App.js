@@ -3,6 +3,7 @@ import { ThemeProvider } from "@emotion/react";
 
 import Navbar from "./components/Navbar";
 import Sidenav from './components/Sidenav';
+import PageDisplay from './components/PageDisplay';
 
 
 let theme = createTheme({
@@ -35,6 +36,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Navbar />
         <Sidenav />
+        <PageDisplay/>
       </ThemeProvider>
     )
   );

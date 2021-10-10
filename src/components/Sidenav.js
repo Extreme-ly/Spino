@@ -1,6 +1,8 @@
 import {Collapse, List, ListItemButton, ListItemIcon, ListItemText, Stack } from '@mui/material'
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import ViewCarouselIcon from '@mui/icons-material/ViewCarousel';
+import ViewDayIcon from '@mui/icons-material/ViewDay';
 import { Box } from '@mui/system'
+
 
 
 import Paper from '@mui/material/Paper';
@@ -18,17 +20,6 @@ const Unit = styled(Paper)(({ theme }) => ({
     color: theme.palette.common.white,
     background: theme.palette.primary.pinkhover
 }));
-
-// const Item = styled(Paper)(({ theme }) => ({
-//     ...theme.typography.body1,
-//     padding: theme.spacing(1),
-//     textAlign: 'center',
-//     marginRight: 20,
-//     width: 100, 
-//     color: theme.palette.common.white,
-//     background: theme.palette.primary.pinkhover
-// }));
-
   
 function Sidenav() {
   const [collapseParent, setCollapseParent] = useState(false)
@@ -43,7 +34,7 @@ function Sidenav() {
   }
 
     return (
-        <Box sx={{ margin: 1 }}>
+        <Box sx={{ margin: 0 }}>
             <Stack
             direction="column"
             justifyContent="flex-start"
@@ -51,10 +42,10 @@ function Sidenav() {
             spacing={3}
             >
               
-              <List sx={{ bgcolor: 'primary.pink', width: 250.906}}>
+              <List sx={{ bgcolor: 'primary.pink', width: 250.906, position: 'absolute'}}>
                   <ListItemButton onClick={handleClickParent}>
                         <ListItemIcon>
-                          <InboxIcon />
+                          <ViewCarouselIcon />
                         </ListItemIcon>
                         <ListItemText primary="Routes" />
                         {collapseParent ? <ExpandLess /> : <ExpandMore />}
@@ -63,7 +54,7 @@ function Sidenav() {
                     <List sx={{marginLeft: 2}}>
                       <ListItemButton onClick={handleClickChild}>
                         <ListItemIcon>
-                          <InboxIcon />
+                          <ViewDayIcon />
                         </ListItemIcon>
                         <ListItemText primary="Handling routes" />
                         {collapseChild ? <ExpandLess /> : <ExpandMore />}
@@ -72,7 +63,7 @@ function Sidenav() {
                       <Collapse in={collapseChild} timeout="auto" unmountOnExit>
                         <List sx={{gap: 8}}>
                           <ListItemButton>
-                            <Unit>Docs</Unit>
+                            <Unit>Documentation</Unit>
                           </ListItemButton>
                         </List>
                       </Collapse>
