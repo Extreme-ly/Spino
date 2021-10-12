@@ -18,7 +18,7 @@ const Unit = styled(Paper)(({ theme }) => ({
     textAlign: 'center',
     width: "100%", 
     color: theme.palette.common.white,
-    background: theme.palette.primary.pinkhover
+    background: theme.palette.primary.typehover
 }));
   
 function Sidenav() {
@@ -42,12 +42,12 @@ function Sidenav() {
             spacing={3}
             >
               
-              <List sx={{ bgcolor: 'primary.pink', width: 250.906, position: 'absolute'}}>
+              <List sx={{ bgcolor: 'primary.type', width: 250.906, position: 'absolute'}}>
                   <ListItemButton onClick={handleClickParent}>
                         <ListItemIcon>
                           <ViewCarouselIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Routes" />
+                        <ListItemText primary="Routes" sx={{ color: ''}} />
                         {collapseParent ? <ExpandLess /> : <ExpandMore />}
                   </ListItemButton>
                   <Collapse in={collapseParent} timeout="auto" unmountOnExit>
