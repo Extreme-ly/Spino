@@ -6,7 +6,7 @@ Template for documentation, personal website.
 Made with MUI. 
 
 ### Light Mode
-![](./public/lightmode.png)
+![](src/public/darkmode.png)
 
 In this template there are two theme options light or dark. You can edit them in the App.js file
 
