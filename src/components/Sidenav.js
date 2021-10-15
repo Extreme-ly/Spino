@@ -22,16 +22,17 @@ const Unit = styled(Paper)(({ theme }) => ({
 }));
   
 function Sidenav() {
-  const [collapseParent, setCollapseParent] = useState(false)
-  const [collapseChild, setCollapseChild] = useState(false)
+  const [introduction, setintroduction] = useState(false)
+  const [introductionChild, setintroductionChild] = useState(false)
+  
+  const [route, setroute] = useState(false)
+  const [routeChild, setrouteChild] = useState(false)
 
-  function handleClickParent() {
-    setCollapseParent(!collapseParent)
-  }
+  function handleClickRouteChild() { setrouteChild(!routeChild) }
+  function handleClickRoute() { setroute(!route) }
+  function handleClickIntroduction() { setintroduction(!introduction) }
+  function handleClickIntroductionChild() { setintroductionChild(!introductionChild) }
 
-  function handleClickChild() {
-    setCollapseChild(!collapseChild)
-  }
 
     return (
         <Box sx={{ margin: 0 }}>
@@ -43,30 +44,45 @@ function Sidenav() {
             >
               
               <List sx={{ bgcolor: 'primary.type', width: 250.906, position: 'absolute'}}>
-                  <ListItemButton onClick={handleClickParent}>
+                  <ListItemButton onClick={handleClickIntroduction}>
                         <ListItemIcon>
                           <ViewCarouselIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Routes" sx={{ color: ''}} />
-                        {collapseParent ? <ExpandLess /> : <ExpandMore />}
+                        <ListItemText primary="Introduction" sx={{ color: ''}} />
+                        {introduction ? <ExpandLess /> : <ExpandMore />}
                   </ListItemButton>
-                  <Collapse in={collapseParent} timeout="auto" unmountOnExit>
+                  <Collapse in={introduction} timeout="auto" unmountOnExit>
                     <List sx={{marginLeft: 2}}>
-                      <ListItemButton onClick={handleClickChild}>
+                      <ListItemButton onClick={handleClickIntroductionChild}>
                         <ListItemIcon>
                           <ViewDayIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Handling routes" />
-                        {collapseChild ? <ExpandLess /> : <ExpandMore />}
+                        <ListItemText primary="Handling Routes" />
+                        {introductionChild ? <ExpandLess /> : <ExpandMore />}
                       </ListItemButton>
                     </List>
-                      <Collapse in={collapseChild} timeout="auto" unmountOnExit>
+                      <Collapse in={introductionChild} timeout="auto" unmountOnExit>
                         <List sx={{gap: 8}}>
                           <ListItemButton>
                             <Unit>Documentation</Unit>
                           </ListItemButton>
                         </List>
                       </Collapse>
+                  </Collapse>
+
+                  <ListItemButton onClick={handleClickRoute}>
+                        <ListItemIcon>
+                          <ViewCarouselIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Routes" sx={{ color: ''}} />
+                        {route ? <ExpandLess /> : <ExpandMore />}
+                  </ListItemButton>
+                  <Collapse in={route} timeout="auto" unmountOnExit>
+                        <List sx={{gap: 8}}>
+                          <ListItemButton>
+                            <Unit>Documentation</Unit>
+                          </ListItemButton>
+                        </List>
                   </Collapse>
                 </List>
             </Stack>

@@ -17,31 +17,6 @@ import Sidenav from './components/Sidenav';
 import PageDisplay from './components/PageDisplay';
 import { IconButton } from "@mui/material";
 
-// let theme = createTheme({
-//   palette: {
-//     shape: {
-//       borderRadiusComponent: '20%'
-//     },
-//     common: {
-//       white: '#FEFBF3'
-//     },
-//     primary: {
-//       main: '#F9F3DF',
-//       bgColor: '#fff',
-//       type: '#FFDAC7',
-//       typehover: '#FFADAD'
-//     },
-//     secondary: {
-//       main: '#edf2ff',
-//     },
-//     shapeCustom: {
-//       radius: {
-//         unit: "20%"
-//       }
-//     }
-//   },
-// });
-
 const getDesignTokens = (mode) => ({
   palette: {
     mode,
@@ -56,9 +31,9 @@ const getDesignTokens = (mode) => ({
           },
           primary: {
             main: '#F9F3DF',
-            bgColor: '#fff',
+            bgColor: '#F8EDED',
             type: '#FFDAC7',
-            typehover: '#FFADAD'
+            typehover: '#FFA6D5'
           },
           secondary: {
             main: '#edf2ff',
@@ -76,8 +51,8 @@ const getDesignTokens = (mode) => ({
           },
           primary: {
             main: '#F9F3DF',
-            bgColor: '#7D1935',
-            type: '#EAB9C9',
+            bgColor: '#303A52',
+            type: '#6E85B2',
             typehover: '#4A47A3'
           },
           secondary: {
