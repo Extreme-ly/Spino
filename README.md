@@ -14,3 +14,6 @@ In this template there are two theme options light or dark. You can edit them in
 
 ### Sidenav Show
 ![](src/public/sidenav.png)
+
+
+## Spino is not yet compatible with small screens
