@@ -6,12 +6,11 @@ Template for documentation, personal website.
 Made with MUI. 
 
 ### Light Mode
-![](src/public/darkmode.png)
+![](src/public/lightmode.png)
 
 In this template there are two theme options light or dark. You can edit them in the App.js file
 
-![](./public/darkmode.png)
-
+![](src/public/darkmode.png)
 
 ### Sidenav Show
-![](./public/sidenav.png)
+![](src/public/sidenav.png)
