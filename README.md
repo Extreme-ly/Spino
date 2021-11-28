@@ -1,7 +1,7 @@
 # Spino
 Template for documentation, personal website.
 
-## This is just the template. No databases or backends have been connected to the project. 
+## This is just the template.
 
 Made with MUI. 
 
